@@ -55,56 +55,56 @@ Tu vas apprendre à :
 ## 📚 Documentation complète
 
 ### 🧠 Phase 1 : Compréhension (30 min)
-- [📖 00. Concepts AWS essentiels](docs/00_concepts.md)
+- [📖 00. Concepts AWS essentiels](Docs-Projets/00_concepts.md)
   - Qu'est-ce que le cloud ?
   - Services AWS de base
   - VPC, EC2, Load Balancer, Auto Scaling
 
 ### 🛠️ Phase 2 : Préparation (1h30)
-- [⚙️ 01. Prérequis et configuration initiale](docs/01_preparation.md)
+- [⚙️ 01. Prérequis et configuration initiale](Docs-Projets/01_preparation.md)
   - Création du compte AWS
   - Configuration de la console
   - Schéma réseau
   
-- [🔒 02. VPC et Security Groups](docs/02_vpc_securite.md)
+- [🔒 02. VPC et Security Groups](Docs-Projets/02_vpc_securite.md)
   - Configuration du réseau virtuel
   - Règles de sécurité
   - Bonnes pratiques
 
 ### ⚙️ Phase 3 : Déploiement (2h30)
-- [💻 03. Création de l'instance EC2](docs/03_instance_ec2.md)
+- [💻 03. Création de l'instance EC2](Docs-Projets/03_instance_ec2.md)
   - Choix de l'AMI
   - Configuration de l'instance
   - Connexion SSH
   
-- [🌐 04. Installation de l'application web](docs/04_application_web.md)
+- [🌐 04. Installation de l'application web](Docs-Projets/04_application_web.md)
   - Installation d'Apache
   - Page de test
   - Vérification
   
-- [⚖️ 05. Configuration du Load Balancer](docs/05_load_balancer.md)
+- [⚖️ 05. Configuration du Load Balancer](Docs-Projets/05_load_balancer.md)
   - Création de l'ALB
   - Target Groups
   - Health Checks
   
-- [📈 06. Mise en place de l'Auto Scaling](docs/06_auto_scaling.md)
+- [📈 06. Mise en place de l'Auto Scaling](Docs-Projets/06_auto_scaling.md)
   - Launch Template
   - Auto Scaling Group
   - Scaling Policies
 
 ### ✅ Phase 4 : Validation (1h15)
-- [🧪 07. Tests et validation](docs/07_tests_validation.md)
+- [🧪 07. Tests et validation](Docs-Projets/07_tests_validation.md)
   - Tests de charge
   - Vérification du scaling
   - Tests de haute disponibilité
   
-- [📊 08. Surveillance CloudWatch](docs/08_surveillance.md)
+- [📊 08. Surveillance CloudWatch](Docs-Projets/08_surveillance.md)
   - Métriques importantes
   - Alarmes
   - Dashboards
 
 ### 🧹 Phase 5 : Nettoyage (15 min)
-- [🗑️ 09. Suppression des ressources](docs/09_nettoyage.md)
+- [🗑️ 09. Suppression des ressources](Docs-Projets/09_nettoyage.md)
   - Ordre de suppression
   - Vérification des coûts
   - Checklist complète
@@ -122,10 +122,7 @@ Tu vas apprendre à :
   - `user-data.sh` : Script de démarrage EC2
   - `security-group-rules.json` : Règles de sécurité
 
-### Aide et dépannage
-- [📝 Commandes utiles](annexes/commandes_utiles.md)
-- [🔧 Guide de dépannage](annexes/troubleshooting.md)
-- [📚 Glossaire AWS](annexes/glossaire.md)
+
 
 ## ⏱️ Temps de réalisation estimé
 
@@ -207,7 +204,7 @@ Ce projet est fourni à des fins éducatives. Libre à toi de l'adapter et de le
 
 ---
 
-**🎯 Prêt à commencer ? Direction le fichier [00_concepts.md](docs/00_concepts.md) !**
+**🎯 Prêt à commencer ? Direction le fichier [00_concepts.md](Docs-Projets/00_concepts.md) !**
 
 ---
 

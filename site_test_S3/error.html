@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erreur 404 - Page non trouvée</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0066CC, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-container {
+            background: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #0066CC;
+            margin-bottom: 1rem;
+        }
+
+        .error-title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .error-message {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .error-suggestions {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 5px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .error-suggestions h3 {
+            color: #0066CC;
+            margin-bottom: 1rem;
+        }
+
+        .error-suggestions ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .error-suggestions li {
+            padding: 0.5rem 0;
+            color: #555;
+        }
+
+        .error-suggestions li:before {
+            content: "✓ ";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #0066CC, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="emoji">😕</div>
+        
+        <div class="error-code">404</div>
+        
+        <h1 class="error-title">Page non trouvée</h1>
+        
+        <p class="error-message">
+            Désolé ! La page que vous recherchez n'existe pas sur ce site.<br>
+            Elle a peut-être été supprimée, déplacée ou vous avez mal tapé l'URL.
+        </p>
+
+        <div class="error-suggestions">
+            <h3>Voici ce que vous pouvez faire :</h3>
+            <ul>
+                <li>Vérifier que l'URL est correcte</li>
+                <li>Retourner à la page d'accueil</li>
+                <li>Utiliser le menu de navigation</li>
+                <li>Contacter le support si le problème persiste</li>
+            </ul>
+        </div>
+
+        <p style="color: #999; font-size: 0.9rem;">
+            <strong>Note :</strong> Ce site est hébergé sur AWS S3 + CloudFront
+        </p>
+
+        <a href="index.html" class="back-button">Retour à l'accueil</a>
+    </div>
+</body>
+</html>

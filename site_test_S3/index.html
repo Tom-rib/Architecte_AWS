@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site AWS - S3 + CloudFront</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">🚀 Mon Site AWS</div>
+            <ul class="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#features">Fonctionnalités</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section Hero -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h1>Bienvenue sur mon site AWS ! 🌍</h1>
+            <p>Hébergé sur <strong>S3</strong> et distribué via <strong>CloudFront</strong></p>
+            <button class="btn" onclick="afficherInfo()">Voir les infos du site</button>
+        </div>
+    </section>
+
+    <!-- Section Infos -->
+    <section id="infos" class="info-section" style="display:none;">
+        <div class="container">
+            <h2>Infos du site</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📍 Région</h3>
+                    <p>eu-west-3 (Paris)</p>
+                </div>
+                <div class="info-card">
+                    <h3>⚡ Vitesse</h3>
+                    <p>200+ serveurs mondiaux (CloudFront)</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔒 Sécurité</h3>
+                    <p>HTTPS + Certificat SSL</p>
+                </div>
+                <div class="info-card">
+                    <h3>💰 Coût</h3>
+                    <p>GRATUIT (tier AWS)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Fonctionnalités</h2>
+            <ul class="features-list">
+                <li>✅ Hébergement statique sur S3</li>
+                <li>✅ Distribution mondiale avec CloudFront</li>
+                <li>✅ Cache intelligent (24h)</li>
+                <li>✅ Gratuit pendant le tier AWS</li>
+                <li>✅ JavaScript interactif côté client</li>
+                <li>✅ Design responsive</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Formulaire -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Formulaire de contact</h2>
+            <form class="contact-form" onsubmit="validerFormulaire(event)">
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" placeholder="votre@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" placeholder="Votre message..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+            <div id="confirmation" style="display:none; margin-top: 20px; padding: 20px; background: #4caf50; color: white; border-radius: 5px; text-align: center;">
+                ✅ Message reçu ! (Note: C'est un site statique, le message n'est pas vraiment envoyé)
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mon Site AWS | Hébergé sur S3 + CloudFront</p>
+            <p>Créé avec ❤️ pour AWS</p>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

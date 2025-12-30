@@ -1,0 +1,47 @@
+{
+  "Comment": "Workflow de traitement de données - Job 9",
+  "StartAt": "ValidateInput",
+  "States": {
+    "ValidateInput": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:eu-west-3:703216717306:function:validate-input",
+      "Next": "ProcessData",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "HandleError"
+        }
+      ]
+    },
+    "ProcessData": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:eu-west-3:703216717306:function:process-data",
+      "Next": "SendNotification",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "HandleError"
+        }
+      ]
+    },
+    "SendNotification": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:eu-west-3:703216717306:function:send-notification",
+      "End": true,
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "HandleError"
+        }
+      ]
+    },
+    "HandleError": {
+      "Type": "Fail",
+      "Error": "WorkflowFailed",
+      "Cause": "An error occurred during workflow execution"
+    }
+  }
+}

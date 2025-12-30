@@ -1,0 +1,14 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "lambda:InvokeFunction",
+      "Resource": [
+        "arn:aws:lambda:eu-west-3:703216717306:function:validate-input",
+        "arn:aws:lambda:eu-west-3:703216717306:function:process-data",
+        "arn:aws:lambda:eu-west-3:703216717306:function:send-notification"
+      ]
+    }
+  ]
+}

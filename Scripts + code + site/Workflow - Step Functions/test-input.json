@@ -1,0 +1,7 @@
+{
+  "data": {
+    "items": ["item1", "item2", "item3"],
+    "action": "process"
+  },
+  "userId": "user-123"
+}

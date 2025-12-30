@@ -1,0 +1,36 @@
+{
+  "family": "mon-app-ecs-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::ACCOUNT_ID:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "mon-app-ecs",
+      "image": "ACCOUNT_ID.dkr.ecr.eu-west-3.amazonaws.com/mon-app-ecs:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "healthCheck": {
+        "command": ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3000/health || exit 1"],
+        "interval": 30,
+        "timeout": 5,
+        "retries": 3,
+        "startPeriod": 60
+      },
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/mon-app-ecs",
+          "awslogs-region": "eu-west-3",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}

@@ -57,6 +57,10 @@ Ce repository contient **toute la documentation et le code** pour maîtriser les
 │
 ├── 📂 Scripts + code + site/     # 💻 CODE SOURCE
 │   └── App-ECS/                  # Application Node.js pour ECS
+|   ├── Site_test_S3/
+|   ├── ECS Fargate ECR/
+│   ├── Athena Quicksight/
+│   └── ...
 │
 └── 📄 Architecte_AWS.pdf         # PDF original du projet
 ```
